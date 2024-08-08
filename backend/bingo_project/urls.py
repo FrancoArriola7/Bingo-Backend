@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('bingo.urls')),
+    re_path(r'^ws/', include('bingo.routing')),  # Incluye las rutas de WebSocket
 ]

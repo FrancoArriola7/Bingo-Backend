@@ -77,7 +77,10 @@ ASGI_APPLICATION = 'bingo_project.asgi.application'
 
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [("redis://localhost:6379")],  # Cambia esto según la URL de Redis en tu entorno de producción
+        },
     },
 }
 
