@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hh-e5-$2)g#)@n6hq+ip1i^(ed(ytwfvfof+zi=^fb)%!4(%yh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.236','127.0.0.1','bingo-backend-2.onrender.com']
+ALLOWED_HOSTS = ['192.168.0.236','127.0.0.1','bingo-backend-9uzq.onrender.com']
 
 
 # Application definition
