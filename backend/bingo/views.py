@@ -96,5 +96,9 @@ def actualizar_cartones(request):
 def resetearJuego(request):
     if request.method == 'POST':
         Musical.objects.update(elegido=False)
-        return JsonResponse({'status': 'success', 'message': 'Todos los estados de los musicales han sido reseteados a False.'})
+
+        # Eliminar todos los cartones y casillas asociadas
+        Carton.objects.all().delete()
+        
+        return JsonResponse({'status': 'success', 'message': 'Todos los estados de los musicales han sido reseteados a False y los cartones han sido eliminados.'})
     return JsonResponse({'status': 'error', 'message': 'Método no permitido.'})
